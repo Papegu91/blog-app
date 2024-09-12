@@ -1,0 +1,14 @@
+/* src/components/BlogDetail.css */
+.blog-detail {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .blog-detail h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .blog-detail p {
+    line-height: 1.6;
+  }
+  
