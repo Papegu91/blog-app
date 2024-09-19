@@ -8,7 +8,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('/auth/login', {
+    fetch('http://127.0.0.1:5000/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),

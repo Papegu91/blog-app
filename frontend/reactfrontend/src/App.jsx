@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import BlogList from './components/BlogList';
 import BlogDetail from './components/BlogDetail';
 import Login from './components/Login';
-import './App.css';
+import CreateBlogPost from './components/CreateBlogPost';
+// import './App.css';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/create" element={<CreateBlogPost />} />
       </Routes>
     </Router>
   );

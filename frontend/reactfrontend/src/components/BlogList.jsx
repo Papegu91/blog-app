@@ -6,10 +6,13 @@ const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch('/api/blogs')
-      .then((response) => response.json())
-      .then((data) => setBlogs(data))
-      .catch((error) => console.error('Error fetching blogs:', error));
+    fetch('http://127.0.0.1:5000/blog/posts')
+    .then(response => response.json())
+    .then(data => {
+      setBlogs(data)
+    })
+    .catch(error => console.error('Error fetching posts:', error));
+  
   }, []);
 
   return (

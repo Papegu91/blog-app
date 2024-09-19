@@ -1,0 +1,85 @@
+
+/* src/components/CreateBlogPost.css */
+.create-blog-post {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-blog-post h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .create-blog-post .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .create-blog-post label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .create-blog-post input[type='text'],
+  .create-blog-post textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #333;
+  }
+  
+  .create-blog-post input[type='text']::placeholder,
+  .create-blog-post textarea::placeholder {
+    color: #999;
+  }
+  
+  .create-blog-post textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .create-blog-post button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 0;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-blog-post button:hover {
+    background-color: #0056b3;
+  }
+  
+  .create-blog-post button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 600px) {
+    .create-blog-post {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  
+    .create-blog-post h2 {
+      font-size: 1.75rem;
+    }
+  
+    .create-blog-post button {
+      font-size: 1rem;
+    }
+  }
