@@ -1,28 +1,110 @@
-/* src/components/BlogList.css */
+/* Main container */
 .blog-list {
-    max-width: 600px;
-    margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+h1 {
+  color: #2c3e50;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Blog post list */
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Individual blog post item */
+li {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog image */
+li img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Blog content */
+li .blog-content {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Blog post links */
+.blog-content a {
+  text-decoration: none;
+  color: #2980b9;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blog-content a:hover {
+  color: #e74c3c;
+}
+
+/* Blog snippet */
+.blog-content p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  li {
+    flex-direction: column;
   }
-  
-  .blog-list h1 {
-    margin-bottom: 1rem;
+
+  li img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
   }
-  
-  .blog-list ul {
-    list-style: none;
-    padding: 0;
+
+  .blog-content {
+    padding: 15px;
   }
-  
-  .blog-list li {
-    margin-bottom: 1rem;
+
+  h1 {
+    font-size: 28px;
   }
-  
-  .blog-list a {
-    text-decoration: none;
-    color: #333;
+
+  .blog-content a {
+    font-size: 20px;
   }
-  
-  .blog-list a:hover {
-    text-decoration: underline;
+
+  .blog-content p {
+    font-size: 14px;
   }
-  
+}

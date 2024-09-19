@@ -1,85 +1,83 @@
-
-/* src/components/CreateBlogPost.css */
+/* Center the form and give it a clean, modern look */
 .create-blog-post {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .create-blog-post h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .create-blog-post .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  .create-blog-post label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .create-blog-post input[type='text'],
-  .create-blog-post textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit;
-    color: #333;
+    max-width: 320px;
   }
-  
-  .create-blog-post input[type='text']::placeholder,
-  .create-blog-post textarea::placeholder {
-    color: #999;
-  }
-  
-  .create-blog-post textarea {
-    min-height: 150px;
-    resize: vertical;
-  }
-  
-  .create-blog-post button {
-    display: inline-block;
-    width: 100%;
-    padding: 0.75rem 0;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.125rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .create-blog-post button:hover {
-    background-color: #0056b3;
-  }
-  
-  .create-blog-post button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  @media (max-width: 600px) {
-    .create-blog-post {
-      padding: 1rem;
-      margin: 1rem;
-    }
-  
-    .create-blog-post h2 {
-      font-size: 1.75rem;
-    }
-  
-    .create-blog-post button {
-      font-size: 1rem;
-    }
-  }
+}
