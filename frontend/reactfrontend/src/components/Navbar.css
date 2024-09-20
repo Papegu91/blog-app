@@ -1,24 +1,25 @@
-/* src/components/Navbar.css */
-
+/* Main Navbar Container */
 .navbar {
-  background-color: #333;
+  background-color: #1a1a1a; /* Darker background for better contrast */
   padding: 1rem 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 100;
 }
 
+/* Container for logo and menu */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Logo Styles */
 .nav-logo {
-  color: #fff;
-  font-size: 1.8rem;
+  color: #f0f0f0; /* Use a light color for high contrast */
+  font-size: 2rem; /* Larger font for visibility */
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -28,31 +29,44 @@
   color: #ff6b6b;
 }
 
+/* Navigation Menu */
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
+/* Individual List Items */
 .nav-menu li {
   display: inline;
 }
 
+/* Menu Links */
 .nav-menu a {
-  color: #fff;
+  color:blue; /* Light color for high contrast */
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
+  font-size: 1.2rem; /* Larger font for better readability */
+  font-weight: 600; /* Increased font weight */
+  padding: 0.7rem 1.2rem; /* Larger padding for clickable area */
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px; /* Slight rounding for accessibility */
 }
 
+/* Hover Effect for Links */
 .nav-menu a:hover {
-  background-color: #ff6b6b;
-  color: #fff;
-  border-radius: 4px;
+  background-color: #ff6b6b; /* High-contrast hover state */
+  color: blue;
+  border-radius: 6px;
 }
 
+/* Focus Effect for Links */
+.nav-menu a:focus {
+  outline: 3px solid #ff6b6b; /* Focus state with a highly visible outline */
+  background-color: #ff6b6b;
+  color: blue;
+}
+
+/* Mobile View */
 @media screen and (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -65,9 +79,9 @@
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #333;
+    background-color: #1a1a1a;
     padding: 1rem;
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 }
